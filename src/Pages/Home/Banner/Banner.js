@@ -16,7 +16,7 @@ const Banner = () => {
                         src={banner2}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
+                    <Carousel.Caption >
                         <h3 className='banner-title'>Create Photography Store</h3>
                         <p>Create  your albunm.Take is long time.Use to the album for Future </p>
                         <button className='find-btn'>Find more</button>

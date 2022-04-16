@@ -7,7 +7,7 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar sticky='top' className='navbar' collapseOnSelect expand="lg"  >
+            <Navbar sticky="top" className='navbar' collapseOnSelect expand="lg"  >
                 <Container>
                     <Navbar.Brand as={Link} to="/home"  ><img className='logo-img' src={logoImg} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
