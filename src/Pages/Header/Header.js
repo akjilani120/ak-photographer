@@ -7,11 +7,11 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar sticky='top' className='navbar' collapseOnSelect expand="lg" bg="white" variant="light">
+            <Navbar sticky='top' className='navbar' collapseOnSelect expand="lg"  >
                 <Container>
                     <Navbar.Brand as={Link} to="/home"  ><img className='logo-img' src={logoImg} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Collapse id="responsive-navbar-nav " className='nav-list-item'>
                         <Nav className="mx-auto">
                             <Nav.Link ><CustomLink className="navigataion-list" to='/'>Home</CustomLink></Nav.Link>
                             <Nav.Link ><CustomLink className="navigataion-list" to='/about'>About</CustomLink></Nav.Link>

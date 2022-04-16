@@ -16,8 +16,15 @@
     height: 60px;
     border-bottom: 1px solid skyblue;
     box-shadow: 0px 2px 10px  skyblue;
+    background-color: white;
 }
 .logo-img{
     width: 150px;
     height: 40px;
+}
+@media screen  and (max-width:980px) {
+    .nav-list-item{
+        background-color: white;
+       padding-bottom: 20px;
+    }  
 }
