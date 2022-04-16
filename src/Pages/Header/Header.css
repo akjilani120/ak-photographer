@@ -1,0 +1,14 @@
+.navigataion-list{
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 30px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+   
+}
+.navbar{
+    height: 60px;
+    border-bottom: 1px solid skyblue;
+    box-shadow: 0px 2px 10px  skyblue;
+}

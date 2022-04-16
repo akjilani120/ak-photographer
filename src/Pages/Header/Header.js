@@ -1,24 +1,25 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-
+import CustomLink from '../CustomLink/CustomLink';
+import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+            <Navbar className='navbar' collapseOnSelect expand="lg" bg="white" variant="light">
                 <Container>
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
+                            <Nav.Link ><CustomLink className="navigataion-list" to='/'>Home</CustomLink></Nav.Link>
+                            <Nav.Link ><CustomLink className="navigataion-list" to='/about'>About</CustomLink></Nav.Link>
+                            <Nav.Link><CustomLink className="navigataion-list" to='/blogs'>Blogs</CustomLink></Nav.Link>
+                            <Nav.Link >
+                            <CustomLink to=''></CustomLink>
                             </Nav.Link>
                         </Nav>
                         <Nav className="">
-                        <Nav.Link href="#deets">login</Nav.Link>
+                        <Nav.Link><CustomLink className="navigataion-list nav-login " to='/login'>Login</CustomLink></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
