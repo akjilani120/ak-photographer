@@ -1,0 +1,28 @@
+.photographerstory{
+   height: 450px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.story-title{
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+}
+.story-about{
+    font-size: 20px;
+    opacity: .7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    margin: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+@media screen and (max-width:650px) {
+    .story-title{
+        font-size: 35px;
+    }
+}
