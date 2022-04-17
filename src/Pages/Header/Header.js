@@ -4,7 +4,14 @@ import CustomLink from '../CustomLink/CustomLink';
 import { Link } from 'react-router-dom';
 import logoImg from '../img/main logo.png'
 import './Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+    const user = useAuthState(auth)
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
         <div>
             <Navbar sticky="top" className='navbar' collapseOnSelect expand="lg"  >
@@ -17,11 +24,16 @@ const Header = () => {
                             <Nav.Link ><CustomLink className="navigataion-list" to='/about'>About</CustomLink></Nav.Link>
                             <Nav.Link><CustomLink className="navigataion-list" to='/blogs'>Blogs</CustomLink></Nav.Link>
                             <Nav.Link >
-                            <CustomLink to=''></CustomLink>
+                                <CustomLink to=''></CustomLink>
                             </Nav.Link>
                         </Nav>
                         <Nav className="">
-                        <Nav.Link><CustomLink className="navigataion-list nav-login " to='/login'>Login </CustomLink></Nav.Link>
+                            { 
+                           user ?
+                           <button onClick={handleSignOut} className='btn btn-primary'>Sign Out</button> :
+                           <Nav.Link><CustomLink className="navigataion-list nav-login " to='/login'>Login </CustomLink></Nav.Link>
+                        }
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -6,15 +6,23 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './SignIn.css'
 import auth from '../../../firebase.init';
 const SignIn = () => {
+    const navigate=useNavigate()
     const [email, setEmail]=useState("")
     const [password, setPassword]=useState('')
     const [name, setName]= useState('')
+    const [errorShow, setErrorShow]= useState("")
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+      if(error){
+          setErrorShow(error.message)
+      }
+      if(user){
+        navigate("/login")
+      }
     const handleEmail = event =>{
         setEmail(event.target.value)
     }
@@ -24,13 +32,11 @@ const SignIn = () => {
     const handlePassword = event =>{
         setPassword(event.target.value)
     }
-    const navigate=useNavigate()
+    
     const handleLogin=() =>{
         navigate("/login")
     }
-    if(user){
-        console.log(user)
-    }
+    
     const handleSubmit = async(e) =>{
         e.preventDefault()   
         createUserWithEmailAndPassword(email, password)           
@@ -55,6 +61,7 @@ const SignIn = () => {
                     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                 </Form.Group>
                  <p className='have-account'>If have already account ? <span className='text-primary login-page' onClick={handleLogin}>Login</span> </p>
+                 <h5 className='text-danger'>{errorShow}</h5>
                 <Button className='px-5 sign-btn' variant="primary" type="submit">
                     Sign In
                 </Button>
