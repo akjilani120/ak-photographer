@@ -1,0 +1,25 @@
+.bg-img{
+    width: 100%;
+    height: 380px;
+    background-position: center top;
+    background-size: cover;
+    margin-bottom: 20px;
+    background-attachment: fixed;
+}
+.overflow{
+    background-color: rgba(16, 15, 15, 0.361);
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.best-title{
+    font-size: 45px;
+    margin-bottom: 15px;
+   
+}
+.best-about{
+    font-size: 18px;
+}
