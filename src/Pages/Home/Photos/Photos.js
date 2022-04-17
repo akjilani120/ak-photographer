@@ -1,8 +1,13 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Photos = ({ photo }) => {
     const { name, img, place } = photo
+    const navigate=useNavigate()
+    const handleDetails =() =>{
+      navigate("/blogs")
+    }
     return (
         <Col>
         <Card>
@@ -12,7 +17,7 @@ const Photos = ({ photo }) => {
             <Card.Text>
              {place}            
             </Card.Text>
-            <button className='btn btn-primary'>More Details</button>
+            <button onClick={handleDetails} className='btn btn-primary'>More Details</button>
           </Card.Body>
         </Card>
       </Col>
