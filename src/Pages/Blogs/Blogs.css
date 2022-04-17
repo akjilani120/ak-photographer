@@ -1,0 +1,9 @@
+.check-btn{
+    font-size: 18px;
+    width: 220px;
+    
+}
+.checkout{
+   display: flex;
+   justify-content: end;
+}
