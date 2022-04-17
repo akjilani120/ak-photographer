@@ -1,7 +1,12 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './SignIn.css'
 const SignIn = () => {
+    const navigate=useNavigate()
+    const handleLogin=() =>{
+        navigate("/login")
+    }
     return (
         <div className='container sign-header '>
            <div className="form-header ">
@@ -20,9 +25,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3 text-start" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                 <p className='have-account'>If have already account ? <span className='text-primary login-page' onClick={handleLogin}>Login</span> </p>
                 <Button className='px-5 sign-btn' variant="primary" type="submit">
                     Sign In
                 </Button>
