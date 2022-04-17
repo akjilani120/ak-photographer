@@ -1,0 +1,14 @@
+.footer-main{
+    background-color: rgb(6, 6, 56);
+    color: white;
+    height: 300px;
+}
+.footer-head{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding-top: 50px;
+}
+.footer-order-list{
+    list-style: none;
+}
