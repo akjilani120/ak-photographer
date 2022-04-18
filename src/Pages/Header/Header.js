@@ -8,7 +8,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 const Header = () => {
-    const user = useAuthState(auth)
+    const [user] = useAuthState(auth)
+    
     const handleSignOut = () => {
         signOut(auth);
     }
@@ -28,10 +29,9 @@ const Header = () => {
                             </Nav.Link>
                         </Nav>
                         <Nav className="">
-                            { 
-                           user ?
-                           <button onClick={handleSignOut} className='btn btn-primary'>Sign Out</button> :
-                           <Nav.Link><CustomLink className="navigataion-list nav-login " to='/login'>Login </CustomLink></Nav.Link>
+                            {  user ?                          
+                           <button onClick={handleSignOut} className='btn btn-primary'>Sign Out</button> 
+                            : <CustomLink className="navigataion-list nav-login " to='/login'>Login </CustomLink>
                         }
                             
                         </Nav>

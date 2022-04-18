@@ -10,7 +10,7 @@
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0px 5px 15px silver;
-    height: 500px;
+    height: 600px;
     background-color: skyblue;
     color: white;
 }
@@ -40,8 +40,23 @@ form input{
     text-decoration: underline;
     cursor: pointer;
 }
+.google{
+    background-color: rgb(253, 198, 125);
+    height: 50px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* .google img{
+    width: 100%;
+} */
 @media screen and (max-width:768px) {
     .form-header{
         width: 90%;
+    }
+    .google{
+        width: 75%;
     }
 }
