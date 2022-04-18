@@ -1,0 +1,27 @@
+.about-header{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+.about-me{
+    height: 500px;
+    width: 60%;
+  
+   text-align: left;
+}
+.about-details{
+    border: 2px solid skyblue;
+   
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.about-list{
+    list-style: none;
+    text-align: left;
+}
+@media screen and (max-width:768px) {
+    .about-me{
+        width: 90%;
+    } 
+}

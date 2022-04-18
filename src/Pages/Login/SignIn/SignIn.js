@@ -52,7 +52,7 @@ const SignIn = () => {
     return (
         <div className='container sign-header '>
            <div className="form-header ">
-               <h1 className=''>Please Sign In</h1>
+               <h1 className=''>Please Registation Now</h1>
            <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3 text-start" controlId="formBasicText">
                     <Form.Label className=''>Name</Form.Label>
