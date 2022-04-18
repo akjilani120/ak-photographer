@@ -11,6 +11,7 @@ import NotFound from './Pages/NotFoundPage/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import CheckOut from './Pages/ChecOutPage/CheckOut';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import MainBlogs from './Pages/Blogs/MainBlogs/MainBlogs';
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
        <Route path='/blogs' element={<Blogs></Blogs>}> </Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signin' element={<SignIn></SignIn>}></Route>
+       <Route path='/mainblogs' element ={<MainBlogs></MainBlogs>}></Route>
        <Route path='/checkout' element={
          <RequireAuth>
            <CheckOut></CheckOut>

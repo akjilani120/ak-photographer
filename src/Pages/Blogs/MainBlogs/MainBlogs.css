@@ -1,0 +1,9 @@
+.question-head{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.question-part{
+    width: 70%;
+    margin: 20px auto;
+}

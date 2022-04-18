@@ -22,11 +22,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav " className='nav-list-item'>
                         <Nav className="mx-auto">
                             <Nav.Link ><CustomLink className="navigataion-list" to='/'>Home</CustomLink></Nav.Link>
-                            <Nav.Link ><CustomLink className="navigataion-list" to='/about'>About</CustomLink></Nav.Link>
-                            <Nav.Link><CustomLink className="navigataion-list" to='/blogs'>Blogs</CustomLink></Nav.Link>
-                            <Nav.Link >
-                                <CustomLink to=''></CustomLink>
-                            </Nav.Link>
+                            <Nav.Link ><CustomLink className="navigataion-list" to='/about'>About Me</CustomLink></Nav.Link>
+                            <Nav.Link><CustomLink className="navigataion-list" to='/mainblogs'>Blogs</CustomLink></Nav.Link>
+                           
                         </Nav>
                         <Nav className="">
                             {  user ?                          
